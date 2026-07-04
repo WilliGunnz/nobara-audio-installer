@@ -1,24 +1,40 @@
-name: Build Release
+name: Build and Release Nobara Audio Installer
 
 on:
   push:
     tags:
       - "v*"
 
+permissions:
+  contents: write
+
 jobs:
-  release:
+  build-release:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Package project
-        run: |
-          zip -r nobara-audio-installer.zip . \
-          -x "*.git*" -x "*.github*"
+      - name: Get version
+        id: version
+        run: echo "VERSION=${GITHUB_REF_NAME}" >> $GITHUB_ENV
 
-      - name: Create Release
+      - name: Create release folder
+        run: |
+          mkdir -p release/nobara-audio-installer
+          rsync -av --exclude='.git' ./ release/nobara-audio-installer/
+
+      - name: Create ZIP archive
+        run: |
+          cd release
+          zip -r nobara-audio-installer-${VERSION}.zip nobara-audio-installer
+
+      - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
-          files: nobara-audio-installer.zip
+          name: Nobara Audio Installer ${{ env.VERSION }}
+          tag_name: ${{ env.VERSION }}
+          files: release/nobara-audio-installer-${{ env.VERSION }}.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
