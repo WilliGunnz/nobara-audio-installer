@@ -1,0 +1,24 @@
+name: Build Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Package project
+        run: |
+          zip -r nobara-audio-installer.zip . \
+          -x "*.git*" -x "*.github*"
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: nobara-audio-installer.zip
