@@ -1,21 +1,30 @@
-# Logs
-logs/
-*.log
-
 # Python
 __pycache__/
 *.py[cod]
 .venv/
+.pytest_cache/
+.ruff_cache/
 
-# Build artifacts
+# Logs
+logs/
+*.log
+
+# Build outputs
 build/
 dist/
 *.egg-info/
+
+# RPM packages
+*.rpm
+
+# Archives
+*.zip
+*.tar.gz
 
 # IDEs
 .vscode/
 .idea/
 
-# OS files
+# Operating system
 .DS_Store
 Thumbs.db
