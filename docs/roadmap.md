@@ -11,37 +11,37 @@ The project is transitioning from a Bash-based installer to a modern Python appl
 - [x] GitHub repository
 - [x] Release workflow
 - [x] Python project
-- [ ] CLI framework
-- [ ] Configuration system
-- [ ] Package scanner
+- [x] CLI framework
+- [x] Configuration system
+- [x] Package scanner
 
 ---
 
 ## Phase 2 – Publisher
 
-- [ ] Scan library
-- [ ] Build ZIP archives
-- [ ] Generate SHA-256
-- [ ] Upload GitHub Releases
-- [ ] Update package manifest
+- [x] Scan library
+- [x] Build ZIP archives
+- [x] Generate SHA-256
+- [x] Upload GitHub Releases
+- [x] Update package manifest
 
 ---
 
 ## Phase 3 – Installer
 
-- [ ] Package installation
-- [ ] Updates
-- [ ] Removal
-- [ ] Dependency checks
+- [x] Package installation
+- [x] Updates
+- [x] Removal
+- [x] Dependency checks
 
 ---
 
 ## Phase 4 – GUI
 
-- [ ] Desktop interface
-- [ ] Search
-- [ ] Categories
-- [ ] Package details
+- [x] Desktop interface
+- [x] Search
+- [x] Categories
+- [x] Package details
 
 ---
 

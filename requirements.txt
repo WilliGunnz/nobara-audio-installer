@@ -1,0 +1,12 @@
+click==8.0.4
+markdown-it-py==4.2.0
+mdurl==0.1.2
+-e git+ssh://git@github.com/WilliGunnz/nobara-audio-installer.git@c1b5396593cbfc3063c2073fe47dc60ee804a9cd#egg=nobara_audio_installer
+packaging==26.2
+Pygments==2.20.0
+rich==13.7.0
+setuptools==83.0.0
+typer>=0.12.0
+wheel==0.47.0
+PyQt6>=6.5.0
+PyQt6-Qt6>=6.5.0
