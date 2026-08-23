@@ -12,8 +12,3 @@ A professional GUI installer for setting up Nobara Linux for audio production.
 - GUI installer
 - GitHub release packaging
 
-## Install
-```bash
-chmod +x install.sh
-./install.sh
-
