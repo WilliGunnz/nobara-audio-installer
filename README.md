@@ -1,7 +1,6 @@
 # Nobara Audio Production Installer
 
 **Author:** Willi Gunnz  
-**Version:** v5.0
 
 A professional GUI installer for setting up Nobara Linux for audio production.
 
@@ -10,7 +9,7 @@ A professional GUI installer for setting up Nobara Linux for audio production.
 - Plugin categories
 - PipeWire tuning
 - Realtime audio setup
-- GUI installer (Zenity)
+- GUI installer
 - GitHub release packaging
 
 ## Install
